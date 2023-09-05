@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cardBorder {
+  @apply relative border-4 w-full h-[21rem] flex flex-col items-center;
+}
+.cardBorder::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(#ffffff00, #000000c7 80%);
+  height: 100%;
+  width: 100%;
+}
+.cardBorderUp {
+  position: absolute;
+  z-index: 10;
+  top: -12px;
+  width: 105%;
+  height: 15px;
+  background: linear-gradient(to right, #ffdb63, #ffe283, #fee38c, #ad9238, #ffdb63,#ffecae);
+}
+.cardBorderLeft {
+  position: absolute;
+  z-index: 10;
+  left: -6px;
+  height: 102%;
+  width: 13px;
+  background: linear-gradient(#ffdb63, #ffe283, #fee38c, #ad9238, #ffdb63,#ffecae);
+}
+.cardBorderRight {
+  position: absolute;
+  z-index: 10;
+  right: -6px;
+  height: 102%;
+  width: 13px;
+  background: linear-gradient(to top, #ffdb63, #ffe283, #fee38c, #ad9238, #ffdb63,#ffecae);
+}
+.cardBorderDown {
+  position: absolute;
+  z-index: 10;
+  bottom: -15px;
+  width: 105%;
+  height: 15px;
+  background: linear-gradient(to left, #ffdb63, #ffe283, #fee38c, #ad9238, #ffdb63,#ffecae);
+}
+.cardInfo {
+  @apply absolute bottom-8 z-10 w-full flex flex-col px-3 text-white uppercase font-semibold text-center;
+}
+.circleAttribute {
+  @apply z-20 absolute top-3 flex border-4 border-solid border-[#ad9238] justify-center items-center px-5 py-3 rounded-[50%] text-white text-2xl font-semibold;
+}
+.circleIntelligence {
+  @apply right-3;
+  background: linear-gradient(23deg, #000e51 15%, #2a3ea5, #98a9fe);
+}
+.circleStrenght {
+  @apply left-3;
+  background: linear-gradient(-23deg, #074300 15%, #368e2c, #b8fab0);
+}
